@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The meeting log 📝</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="alert alert-success collapse" id="dailylogsaved" role="alert">
+      Daily log saved!
+    </div>
+
+    <header>
+      <h1 class="title">The meeting log 📝</h1>
+    </header>
+    <main>
+      <form class="meeting-form">
+        <div class="form-group">
+          <label for="username">At the pen</label>
+          <input
+            class="form-control"
+            type="text"
+            name="username"
+            placeholder="Your name"
+            id="username"
+          />
+          <label for="discussion">Discussion</label>
+
+          <textarea
+            class="form-control"
+            type="text"
+            rows="5"
+            placeholder="Issues discussed"
+            name="discussion"
+            id="discussion"
+            aria-describedby="discussionHelpBlock"
+          >
+          </textarea>
+          <small id="discussionHelpBlock" class="form-text text-muted">
+            Take note of any discussion that has relevant bearing on the
+            project, like announcement of delays, cost overruns or RFI:s.
+          </small>
+        </div>
+        <button class="btn btn-primary">Save meeting log ✅</button>
+      </form>
+      <div class="loading">
+        <img src="loading.gif" alt="" />
+      </div>
+      <div class="dailylogs"></div>
+    </main>
+    <script src="client.js"></script>
+  </body>
+</html>
